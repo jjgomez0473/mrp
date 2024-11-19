@@ -15,7 +15,7 @@ def calculate_order_date(row):
     year = need_week // 100
     week = need_week % 100    
     # Calcular el primer día de la semana (lunes)
-    first_day_of_week = datetime.strptime(f'{year}-W{week - 1}-1', "%G-W%V-%u")
+    first_day_of_week = datetime.strptime(f'{year}-W{week}-1', "%G-W%V-%u")
     
     # Sumar el lead time
     lead_time = row['suppier_lead_time']  # Asegúrate de que esta columna esté en tu DataFrame
